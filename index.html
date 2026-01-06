@@ -284,4 +284,226 @@
       <div class="container">
         <div class="section__head">
           <h2>Recent Projects</h2>
-          <p class="muted">Пока фоток нет — поставил стильные плейсхолдеры. Потом заменишь
+          <p class="muted">Пока фоток нет — поставил стильные плейсхолдеры. Потом заменишь на реальные.</p>
+        </div>
+
+        <div class="gallery">
+          <a class="shot" href="#contact" aria-label="Project 1">
+            <div class="shot__img"></div>
+            <div class="shot__cap">
+              <div class="shot__title">Drywall Patch + Paint Match</div>
+              <div class="shot__sub muted">NE Portland</div>
+            </div>
+          </a>
+
+          <a class="shot" href="#contact" aria-label="Project 2">
+            <div class="shot__img"></div>
+            <div class="shot__cap">
+              <div class="shot__title">TV Mount + Cable Tidy</div>
+              <div class="shot__sub muted">Pearl District</div>
+            </div>
+          </a>
+
+          <a class="shot" href="#contact" aria-label="Project 3">
+            <div class="shot__img"></div>
+            <div class="shot__cap">
+              <div class="shot__title">Shelving Install</div>
+              <div class="shot__sub muted">Beaverton</div>
+            </div>
+          </a>
+
+          <a class="shot" href="#contact" aria-label="Project 4">
+            <div class="shot__img"></div>
+            <div class="shot__cap">
+              <div class="shot__title">Door Alignment + Hardware</div>
+              <div class="shot__sub muted">SE Portland</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="center">
+          <a class="btn btn--ghost" href="#contact">Ask about your project →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section section--soft" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2>Pricing</h2>
+          <p class="muted">Прозрачно: платишь за работу и материалы. Никакой магии и “ну это сложно”.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="priceCard">
+            <div class="priceCard__head">
+              <h3>Small Fix</h3>
+              <div class="price">$149<span class="muted"> / first hour</span></div>
+            </div>
+            <div class="priceCard__body">
+              <div class="li">✓ Minimum visit (1 hour)</div>
+              <div class="li">✓ Simple repairs & installs</div>
+              <div class="li">✓ Cleanup included</div>
+              <div class="li muted">Materials not included</div>
+            </div>
+            <a class="btn btn--primary" href="#contact">Book</a>
+          </div>
+
+          <div class="priceCard priceCard--featured">
+            <div class="tag">Most Popular</div>
+            <div class="priceCard__head">
+              <h3>Half Day</h3>
+              <div class="price">$499<span class="muted"> / up to 4 hours</span></div>
+            </div>
+            <div class="priceCard__body">
+              <div class="li">✓ Best for punch lists</div>
+              <div class="li">✓ Multiple small tasks</div>
+              <div class="li">✓ Priority scheduling</div>
+              <div class="li muted">Materials billed at cost + receipt</div>
+            </div>
+            <a class="btn btn--primary" href="#contact">Request Slot</a>
+          </div>
+
+          <div class="priceCard">
+            <div class="priceCard__head">
+              <h3>Custom Quote</h3>
+              <div class="price">Quote<span class="muted"> / project</span></div>
+            </div>
+            <div class="priceCard__body">
+              <div class="li">✓ Larger installs</div>
+              <div class="li">✓ Small remodel support</div>
+              <div class="li">✓ Commercial maintenance</div>
+              <div class="li muted">Photos/video help us quote faster</div>
+            </div>
+            <a class="btn btn--ghost" href="#contact">Get Quote</a>
+          </div>
+        </div>
+
+        <div class="tiny muted center">
+          * Replace these prices with your real numbers. Я поставил “смотрится как надо”.
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <div class="contact__left">
+          <h2>Contact</h2>
+          <p class="muted">
+            Опиши задачу, приложи фотки/видео — и мы быстро скажем цену/время. Чем точнее — тем меньше сюрпризов.
+          </p>
+
+          <div class="contactCards">
+            <a class="contactCard" href="tel:+15035551234">
+              <div class="contactCard__icon">📞</div>
+              <div>
+                <div class="contactCard__title">Call</div>
+                <div class="muted">(503) 555-1234</div>
+              </div>
+            </a>
+
+            <a class="contactCard" href="mailto:hello@pdxprofix.com?subject=Service%20Request%20-%20PDX%20PRO%20FIX">
+              <div class="contactCard__icon">✉️</div>
+              <div>
+                <div class="contactCard__title">Email</div>
+                <div class="muted">hello@pdxprofix.com</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="note">
+            <b>Tip:</b> add 2–3 photos and a short video. It speeds everything up.
+          </div>
+        </div>
+
+        <div class="contact__right">
+          <!-- Static-site form note:
+               This uses "mailto:" by default (no backend).
+               If you want real submissions, use Formspree / Basin / Netlify Forms.
+          -->
+          <form class="form" id="quoteForm">
+            <div class="form__row">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label>
+                Phone
+                <input type="tel" name="phone" placeholder="(503) 555-1234" />
+              </label>
+            </div>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </label>
+
+            <label>
+              What do you need help with?
+              <textarea name="message" rows="5" placeholder="Describe the job, location, timing, and attach photos in the email that opens." required></textarea>
+            </label>
+
+            <div class="form__row form__row--actions">
+              <button class="btn btn--primary" type="submit">Send Request</button>
+              <a class="btn btn--ghost" href="tel:+15035551234">Call Instead</a>
+            </div>
+
+            <div class="tiny muted">
+              This opens your email client to send details. Want a real web form submission? I’ll wire Formspree in 2 минуты.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="PDX PRO FIX logo" />
+          <div>
+            <div class="footer__title">PDX PRO FIX</div>
+            <div class="muted small">Handyman • Repair • Maintenance</div>
+          </div>
+        </div>
+        <div class="small muted">© <span id="year"></span> PDX PRO FIX. All rights reserved.</div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__head">Links</div>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__head">Contact</div>
+        <a href="tel:+15035551234">(503) 555-1234</a>
+        <a href="mailto:hello@pdxprofix.com">hello@pdxprofix.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Portland%2C%20OR" target="_blank" rel="noopener">Portland, OR</a>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__head">Service Hours</div>
+        <div class="small">Open Everyday</div>
+        <div class="small muted">7:00am – 9:00pm</div>
+        <div class="small muted">Emergency by request</div>
+      </div>
+    </div>
+
+    <a class="toTop" href="#top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <!-- Floating call button -->
+  <a class="fab" href="tel:+15035551234" aria-label="Call PDX PRO FIX">
+    <span class="fab__icon">📞</span>
+    <span class="fab__text">Call</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
