@@ -35,6 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
         quoteForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const email = formData.get('email');
+            const project = formData.get('project');
+            
             // Show success message
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.innerHTML;
@@ -42,15 +49,22 @@ document.addEventListener('DOMContentLoaded', function() {
             button.disabled = true;
             button.style.backgroundColor = '#10b981';
             
+            // In a real application, you would send this data to a server
+            // For now, we'll just log it and show an alert
+            console.log('Quote Request:', { name, phone, email, project });
+            
             // Reset form
             this.reset();
             
-            // Reset button after 3 seconds
+            // Show confirmation
+            alert(`Thank you ${name}! Your quote request has been received. We'll contact you at ${phone} within 24 hours.`);
+            
+            // Reset button after 5 seconds
             setTimeout(() => {
                 button.innerHTML = originalText;
                 button.disabled = false;
                 button.style.backgroundColor = '';
-            }, 3000);
+            }, 5000);
         });
     }
     
@@ -77,6 +91,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }
+        });
+    });
+    
+    // Add click-to-call functionality
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            console.log('Calling: ' + this.getAttribute('href'));
+            // In a real mobile device, this will open the phone dialer
         });
     });
 });
