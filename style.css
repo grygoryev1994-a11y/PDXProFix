@@ -1,8 +1,8 @@
 /* Reset & Base Styles */
 :root {
-    --primary-color: #2563eb; /* Modern blue */
+    --primary-color: #2563eb;
     --primary-dark: #1e40af;
-    --secondary-color: #0f766e; /* Teal accent */
+    --secondary-color: #0f766e;
     --dark-color: #1e293b;
     --light-color: #f8fafc;
     --gray-color: #64748b;
@@ -538,6 +538,21 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     opacity: 0.7;
+}
+
+/* Logo specific styles */
+.logo img {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.footer-brand img {
+    height: 40px;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
 }
 
 /* Responsive */
