@@ -1,259 +1,287 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDXProFix | Portland Professional Handyman</title>
-    <style>
-        /* СТИЛИ ПРЯМО ЗДЕСЬ - не нужно отдельный файл */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .header {
-            background: white;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .logo {
-            font-size: 28px;
-            font-weight: bold;
-            color: #2563eb;
-            text-decoration: none;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 150px 0 100px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #1e293b;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            color: #64748b;
-            max-width: 600px;
-            margin: 0 auto 40px;
-        }
-        
-        .phone-button {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 10px;
-        }
-        
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 50px;
-            color: #1e293b;
-        }
-        
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            border-top: 4px solid #2563eb;
-        }
-        
-        .service-card h3 {
-            color: #2563eb;
-            margin-bottom: 15px;
-            font-size: 22px;
-        }
-        
-        .contact {
-            background: #2563eb;
-            color: white;
-            text-align: center;
-            padding: 80px 0;
-        }
-        
-        .contact h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .contact-phone {
-            font-size: 32px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-        
-        .footer {
-            background: #1e293b;
-            color: #cbd5e1;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 36px;
-            }
-            .hero p {
-                font-size: 18px;
-                padding: 0 20px;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="PDX PRO FIX — Handyman & Home Repair in Portland, OR. Fast, clean, insured." />
+  <title>PDX PRO FIX | Handyman in Portland, OR</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Clean, modern, “contractor” vibe -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.png" />
 </head>
+
 <body>
-    <!-- Шапка -->
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">PDXProFix</a>
-        </div>
-    </header>
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="pill">Licensed • Insured • Local</span>
+        <span class="topbar__hint">Portland, OR & nearby areas</span>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__link" href="tel:+15035551234" aria-label="Call PDX PRO FIX">(503) 555-1234</a>
+        <span class="dot">•</span>
+        <a class="topbar__link" href="mailto:hello@pdxprofix.com">hello@pdxprofix.com</a>
+      </div>
+    </div>
+  </div>
 
-    <!-- Главный баннер -->
-    <section class="hero">
-        <div class="container">
-            <h1>Professional Handyman Services in Portland</h1>
-            <p>Reliable, skilled, and on time. We handle repairs, installations, and home projects with precision and care.</p>
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="PDX PRO FIX home">
+        <img class="brand__logo" src="assets/logo.png" alt="PDX PRO FIX logo" />
+        <span class="brand__name">PDX PRO FIX</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav__link" href="#services">Services</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#pricing">Pricing</a>
+        <a class="nav__link" href="#contact">Contact</a>
+        <a class="btn btn--sm btn--primary nav__cta" href="#contact">Request Service</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__head">
+          <div class="drawer__brand">
+            <img class="drawer__logo" src="assets/logo.png" alt="PDX PRO FIX logo" />
             <div>
-                <a href="tel:+19713472644" class="phone-button">📞 (971) 347-2644</a>
-                <a href="#contact" class="phone-button" style="background: white; color: #2563eb; border: 2px solid #2563eb;">📧 Get Quote</a>
+              <div class="drawer__title">PDX PRO FIX</div>
+              <div class="drawer__sub">Handyman • Repairs • Install</div>
             </div>
+          </div>
+          <button class="drawer__close" id="drawerClose" aria-label="Close menu">✕</button>
         </div>
+
+        <div class="drawer__links">
+          <a href="#services" class="drawer__link">Services</a>
+          <a href="#about" class="drawer__link">About</a>
+          <a href="#projects" class="drawer__link">Projects</a>
+          <a href="#pricing" class="drawer__link">Pricing</a>
+          <a href="#contact" class="drawer__link">Contact</a>
+        </div>
+
+        <div class="drawer__actions">
+          <a class="btn btn--primary" href="tel:+15035551234">Call Now</a>
+          <a class="btn btn--ghost" href="#contact">Request Quote</a>
+        </div>
+
+        <div class="drawer__foot">
+          <div class="small">Service hours: <b>7:00am – 9:00pm</b></div>
+          <div class="small muted">Emergency visits available by request.</div>
+        </div>
+      </div>
+      <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="kicker">Service you can trust</div>
+          <h1>
+            Portland Handyman & Home Repair
+            <span class="accent">Done Right.</span>
+          </h1>
+          <p class="lead">
+            Fast fixes, clean installs, and no “мы щас приедем” на две недели. We show up, we communicate, we finish.
+          </p>
+
+          <div class="hero__badges">
+            <div class="badge">
+              <div class="badge__big">Same-Week</div>
+              <div class="badge__small">Appointments</div>
+            </div>
+            <div class="badge">
+              <div class="badge__big">Clear</div>
+              <div class="badge__small">Pricing</div>
+            </div>
+            <div class="badge">
+              <div class="badge__big">Insured</div>
+              <div class="badge__small">Work</div>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contact">Request Service</a>
+            <a class="btn btn--ghost" href="tel:+15035551234">Call (503) 555-1234</a>
+          </div>
+
+          <div class="hero__trust">
+            <div class="check">✓ Drywall • Painting • Carpentry</div>
+            <div class="check">✓ Fixtures • TV Mounting • Assembly</div>
+            <div class="check">✓ Small remodel help & punch lists</div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <!-- You can swap this with real photos later -->
+          <div class="mediaCard">
+            <div class="mediaCard__top">
+              <div class="mediaCard__tag">PDX PRO FIX</div>
+              <div class="mediaCard__tag mediaCard__tag--ghost">Licensed & Insured</div>
+            </div>
+
+            <div class="mediaCard__visual" aria-label="Showcase">
+              <div class="visual__grid">
+                <div class="visual__tile"></div>
+                <div class="visual__tile"></div>
+                <div class="visual__tile"></div>
+                <div class="visual__tile"></div>
+              </div>
+              <div class="visual__overlay">
+                <div class="visual__headline">Repairs. Installs. Upgrades.</div>
+                <div class="visual__sub">Portland, OR • Residential & small commercial</div>
+              </div>
+            </div>
+
+            <div class="mediaCard__bottom">
+              <div class="rating">
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span class="muted">Trusted by local homeowners</span>
+              </div>
+              <a class="link" href="#projects">See recent projects →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__fade"></div>
     </section>
 
-    <!-- Услуги -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services">
-                <div class="service-card">
-                    <h3>Home Repairs</h3>
-                    <p>Drywall, doors, windows, flooring, trim work, and general maintenance.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Bathroom & Kitchen</h3>
-                    <p>Fixture installation, plumbing fixes, caulking, backsplash, and repairs.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Painting</h3>
-                    <p>Interior/exterior painting, staining, trim work, and surface preparation.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Installation</h3>
-                    <p>TV mounting, furniture assembly, shelving, fixtures, and hardware.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Carpentry</h3>
-                    <p>Custom projects, deck repairs, fence fixes, and built-in solutions.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Honey-Do Lists</h3>
-                    <p>Your complete to-do list handled in one efficient visit.</p>
-                </div>
-            </div>
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <h2>Services</h2>
+          <p class="muted">Выбирай — сделаем аккуратно, без цирка и “ой у нас нет инструмента”.</p>
         </div>
+
+        <div class="grid cards">
+          <article class="card">
+            <div class="card__icon">🔧</div>
+            <h3>General Repairs</h3>
+            <p>Doors, hinges, trim, drywall patches, small fixes, punch lists.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🧱</div>
+            <h3>Drywall & Paint</h3>
+            <p>Patch, texture match, prep, prime, clean interior paint work.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🪚</div>
+            <h3>Carpentry</h3>
+            <p>Shelving, baseboards, small builds, adjustments, fittings.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">📺</div>
+            <h3>TV Mounting</h3>
+            <p>Mounting, cable concealment (as possible), soundbar setup.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🚪</div>
+            <h3>Windows & Doors</h3>
+            <p>Weatherstripping, locks, alignment, small replacements.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon">🧰</div>
+            <h3>Assembly & Install</h3>
+            <p>Furniture assembly, curtains, mirrors, shelves, hardware installs.</p>
+          </article>
+        </div>
+
+        <div class="ctaStrip">
+          <div>
+            <div class="ctaStrip__title">Not sure if it’s on the list?</div>
+            <div class="ctaStrip__sub muted">Send a photo/video — we’ll tell you yes/no and how fast.</div>
+          </div>
+          <div class="ctaStrip__actions">
+            <a class="btn btn--primary" href="#contact">Message Us</a>
+            <a class="btn btn--ghost" href="mailto:hello@pdxprofix.com?subject=PDX%20PRO%20FIX%20Service%20Request&body=Hi!%20Here%20are%20details%20and%20photos%3A%0A%0A">Email Photos</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Почему мы -->
-    <section class="section" style="background: #f8fafc;">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="services">
-                <div class="service-card" style="border-color: #10b981;">
-                    <h3 style="color: #10b981;">✔ Fully Insured</h3>
-                    <p>Complete liability coverage for your peace of mind.</p>
-                </div>
-                <div class="service-card" style="border-color: #f59e0b;">
-                    <h3 style="color: #f59e0b;">🕒 On Time Guarantee</h3>
-                    <p>We respect your schedule with punctual service.</p>
-                </div>
-                <div class="service-card" style="border-color: #8b5cf6;">
-                    <h3 style="color: #8b5cf6;">⭐ Quality Work</h3>
-                    <p>Skilled craftsmanship with satisfaction guarantee.</p>
-                </div>
-                <div class="service-card" style="border-color: #ef4444;">
-                    <h3 style="color: #ef4444;">📞 24h Response</h3>
-                    <p>Quick replies and fast scheduling for urgent needs.</p>
-                </div>
+    <!-- About -->
+    <section class="section section--soft" id="about">
+      <div class="container about">
+        <div class="about__left">
+          <h2>About PDX PRO FIX</h2>
+          <p>
+            We’re a Portland-based handyman service focused on quality, communication, and clean work.
+            Small jobs matter — because your home isn’t a “мелочь”, это твоя жизнь.
+          </p>
+
+          <div class="list">
+            <div class="li">✓ Clear estimates (time + materials)</div>
+            <div class="li">✓ Respect for your space (shoe covers, cleanup)</div>
+            <div class="li">✓ Reliable scheduling & updates</div>
+          </div>
+
+          <div class="miniGrid">
+            <div class="miniStat">
+              <div class="miniStat__num">24–48h</div>
+              <div class="miniStat__label muted">Typical response time</div>
             </div>
+            <div class="miniStat">
+              <div class="miniStat__num">1–3h</div>
+              <div class="miniStat__label muted">Most small jobs</div>
+            </div>
+            <div class="miniStat">
+              <div class="miniStat__num">100%</div>
+              <div class="miniStat__label muted">Satisfaction goal</div>
+            </div>
+          </div>
         </div>
+
+        <div class="about__right">
+          <div class="panel">
+            <h3>Service Area</h3>
+            <p class="muted">Portland + nearby (Beaverton, Tigard, Gresham, Vancouver WA by request).</p>
+            <div class="panel__row">
+              <a class="btn btn--primary btn--sm" href="#contact">Get a Quote</a>
+              <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&query=Portland%2C%20OR" target="_blank" rel="noopener">Open Map</a>
+            </div>
+          </div>
+
+          <div class="panel panel--dark">
+            <h3>Licensed & Insured</h3>
+            <p class="muted">Add your license/CCB numbers here once ready.</p>
+            <div class="small">
+              <b>CCB:</b> XXXXX<br/>
+              <b>Bond:</b> Yes<br/>
+              <b>Insurance:</b> Yes
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Контакты -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Ready to Fix It?</h2>
-            <p style="font-size: 20px; margin-bottom: 30px;">Call now for a free estimate</p>
-            <div class="contact-phone">(971) 347-2644</div>
-            <p style="margin: 20px 0;">Or send us a message:</p>
-            <div style="max-width: 500px; margin: 0 auto;">
-                <input type="text" placeholder="Your Name" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 5px;">
-                <input type="tel" placeholder="Your Phone" style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 5px;">
-                <textarea placeholder="Describe your project..." style="width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 5px; height: 100px;"></textarea>
-                <button style="background: white; color: #2563eb; border: none; padding: 15px 40px; font-size: 18px; border-radius: 5px; cursor: pointer;">Send for Quote</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Подвал -->
-    <footer class="footer">
-        <div class="container">
-            <h3 style="color: white; margin-bottom: 20px;">PDXProFix</h3>
-            <p>Professional handyman services in Portland, OR</p>
-            <p style="margin: 20px 0;">Service Area: Portland, Beaverton, Hillsboro, Gresham, Vancouver</p>
-            <p>Hours: Mon-Fri 7am-6pm | Sat 8am-4pm</p>
-            <p style="margin-top: 30px;">© 2024 PDXProFix. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Простой JavaScript -->
-    <script>
-        // Простая форма
-        document.querySelector('button').onclick = function() {
-            alert('Thank you! This is a demo form. Please call (971) 347-2644 for a real quote.');
-        };
-        
-        // Текущий год в футере
-        document.querySelector('footer p:last-child').innerHTML = '© ' + new Date().getFullYear() + ' PDXProFix. All rights reserved.';
-    </script>
-</body>
-</html>
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2>Recent Projects</h2>
+          <p class="muted">Пока фоток нет — поставил стильные плейсхолдеры. Потом заменишь
